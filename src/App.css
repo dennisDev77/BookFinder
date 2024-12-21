@@ -34,10 +34,12 @@
     display:block;
     max-width:100%;
     outline:none;
+    border: none;
   }
   button{
     display:block;
     outline:none;
+    border: none;
   }
   a{
     text-decoration:none;
@@ -51,7 +53,7 @@
 
   /*componentes Reaproveitaveis*/
   .container{
-  max-width: 69rem;
+  max-width: 70rem;
   margin: 0 auto;
   }
   
