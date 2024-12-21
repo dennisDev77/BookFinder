@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
+/* Importando a font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --white-color:#EEF2F3;
+    --black-color:#010000;
+    --gray-color:#403E3E;
+    --blue-color:#5591C5;
+      --font-type:'Poppins', sans-serif
+  }
+
+  body{
+    background-color:var(--white-color);
+    font-family:var(--font-type);
+    min-height:100vh;
+    max-width:100vw;
+    color:var(--gray-color)
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p{
+    display:block;
+    margin:0;
+    padding:0;
+  }
+  input,
+  textarea{
+    display:block;
+    max-width:100%;
+    outline:none;
+  }
+  button{
+    display:block;
+    outline:none;
+  }
+  a{
+    text-decoration:none;
+    color:var(--black-color)
+  }
+  ul,
+  li{
+    list-style:none
+  }
+
+
+  /*componentes Reaproveitaveis*/
+  .container{
+  max-width: 69rem;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .title{
+    font-size:2rem;
+    color: var(--black-color);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
