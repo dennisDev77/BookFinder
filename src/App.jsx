@@ -19,7 +19,6 @@ function App() {
 
           </main>
           </BrowserRouter>
-
         </section>
     </>
   )
