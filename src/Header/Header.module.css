@@ -1,23 +1,30 @@
- .inputSearch input{
+/* Estles input Search */
+.inputSearch input{
     transition: .2s;
-    border: 1px solid #5591C5;
+    border: 1px solid #403E3E;
  }
- .inputSearch button{
-    border-top-right-radius:10rem ;
-    border-bottom-right-radius:10rem ;
- }
+ 
  .inputSearch input:hover,
  .inputSearch input:focus{
-    box-shadow: 0 0 1px 1px #5591C5;
+    box-shadow: 0 0 1px #403E3E;
  }
 
  .inputSearch input::placeholder{
     color: #918c8c;
  }
 
- .abaMenu{
-  box-shadow: 0 -1px #918c8c33;
+ .inputSearch button{
+    border-top-right-radius:10rem ;
+    border-bottom-right-radius:10rem ;
  }
+
+ /* Menu Aba */
+ .abaMenu{
+  box-shadow: 0 -1px #918c8c33, 0 1px #918c8c33;
+  padding: .3rem;
+ }
+
+ /* Munu wrapper */
  .menuWrapper{
-  border: 1px solid red;
+border-bottom-left-radius: .8rem;
  }
