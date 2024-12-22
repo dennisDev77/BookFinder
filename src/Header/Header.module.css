@@ -1,0 +1,23 @@
+ .inputSearch input{
+    transition: .2s;
+    border: 1px solid #5591C5;
+ }
+ .inputSearch button{
+    border-top-right-radius:10rem ;
+    border-bottom-right-radius:10rem ;
+ }
+ .inputSearch input:hover,
+ .inputSearch input:focus{
+    box-shadow: 0 0 1px 1px #5591C5;
+ }
+
+ .inputSearch input::placeholder{
+    color: #918c8c;
+ }
+
+ .abaMenu{
+  box-shadow: 0 -1px #918c8c33;
+ }
+ .menuWrapper{
+  border: 1px solid red;
+ }
