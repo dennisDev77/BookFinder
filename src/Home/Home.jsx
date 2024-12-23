@@ -2,16 +2,24 @@ import React from 'react'
 import api from '../Services/api'
 
 const Home = () => {
-  const [books, setBooks]=React.useEffect([])
-  
+  const [books, setBooks]=React.useState([])
+
   async function showtBooks(){
-    const response= await api.get('/&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s')
-    setBooks(response.data)
-    console.log(books)
+
+    try{
+      const response= await api.get('/&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s')
+      setBooks(response.data)
+      console.log(books)
+
+    }catch(err){
+      console.log(`Existem um erro ${err}`)
+    }
    }
 
    React.useEffect(()=>{
+
       showtBooks()
+
    },[])
   return (
 
@@ -26,11 +34,18 @@ const Home = () => {
         </p>
       </div>
 
-      <div className='livros'>
+      <div >
 
-        <div className='romance'>
-          
-        </div>
+        {books?
+         
+          <div className='livros'>
+            <h2 className='text-center'>Temos cerca de {books.totalItems} livros </h2>
+              {books.kind}
+
+            </div>
+        :
+          <h1>Carregando Capas</h1>
+        }
 
       </div>
     </section>
