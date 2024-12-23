@@ -26,5 +26,7 @@
 
  /* Munu wrapper */
  .menuWrapper{
-border-bottom-left-radius: .8rem;
+   border-bottom-left-radius: .8rem;
+   background-color: #EEF2F3;
+   z-index: 2024;
  }

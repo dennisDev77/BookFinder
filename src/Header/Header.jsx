@@ -7,9 +7,29 @@ import { TbCategoryFilled } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import {menu} from '../Data/Data'
 import styles from './Header.module.css'
+import api from '../Services/api';
 
 const Header = () => {
   const [menuState, setMenuState]=React.useState(false)
+  const [search, setSearch]=React.useState([])
+
+  const searchBook=React.useRef()
+
+ async  function handleClick(){
+    const inputSearch=searchBook.current.value
+
+    try{
+       const response= await api.get(`/${inputSearch}&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s`)
+       setSearch(response.data.items)
+       search.map(book=>(
+
+         console.log(book.volumeInfo.imageLinks.smallThumbnail)
+       ))
+
+    }catch(err){
+      console.log(err)
+    }
+  }
 
   return (
 
@@ -27,9 +47,9 @@ const Header = () => {
     {/*  Input search */}
 
       <div className={`${styles.inputSearch} w-80 flex items-center relative`}>
-      <input type="search" placeholder='Procure por: titulo, autor ou genero' className=' w-full transition p-3   px-4 text-sm text-color-black rounded-full bg-color-white'/>
+      <input type="search" placeholder='Procure por: titulo, autor ou genero' className=' w-full transition p-3   px-4 text-sm text-color-black rounded-full bg-color-white' ref={searchBook}/>
 
-      <button className=' absolute right-2 text-2xl p-2 text-color-black bg-color-white'>
+      <button className=' absolute right-2 text-2xl p-2 text-color-black bg-color-white' onClick={handleClick}>
         <LiaSearchSolid/>
       </button>
       </div>
@@ -66,6 +86,13 @@ const Header = () => {
     </div>
 
     </div>
+
+    {/* {
+      search &&
+      <div key={book.volumeInfo.title}>
+        <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Carregando Foto" />
+      </div>
+    } */}
     </header>
   )
 }
