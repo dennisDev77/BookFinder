@@ -1,31 +1,44 @@
 import React from 'react'
+import styles from './Home.module.css'
+import PuffLoader from "react-spinners/PuffLoader";
 import api from '../Services/api'
+// import {gsap} from 'gsap'
 
 const Home = () => {
+
+  // Insert the Variable
   const [books, setBooks]=React.useState([])
+  const [loading, setLoading]=React.useState(true)
+  const headline=React.useRef()
+
+
+  React.useEffect(()=>{
 
   async function showtBooks(){
 
     try{
+
       const response= await api.get('/&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s')
       setBooks(response.data)
-      console.log(books)
 
     }catch(err){
       console.log(`Existem um erro ${err}`)
     }
-   }
-
-   React.useEffect(()=>{
-
+    }
       showtBooks()
+      
+    },[])
 
-   },[])
-  return (
+    React.useEffect(()=>{
+      console.log(books)
+    }, [books])
+  
+    return (
 
     <section>
 
       <div className='flex justify-center pt-20 flex-col gap-2'>
+
         <h2 className='text-color-black text-5xl font-medium text-center'>Você Acobou De Encontrar os Melhores 
           <span className='text-color-blue'>Books</span> Que <span className='text-color-blue'>Procura</span>
         </h2>
@@ -34,19 +47,18 @@ const Home = () => {
         </p>
       </div>
 
-      <div >
+      <div className='books'>
+      {loading &&
 
-        {books?
-         
-          <div className='livros'>
-            <h2 className='text-center'>Temos cerca de {books.totalItems} livros </h2>
-              {books.kind}
+      <div className={`${styles.loader} flex justify-center pt-16`}>
+        <PuffLoader
+          color='#5591C5'
+          loading={loading}
+          size={50}
+          />
 
-            </div>
-        :
-          <h1>Carregando Capas</h1>
-        }
-
+      </div>
+      }
       </div>
     </section>
   )
