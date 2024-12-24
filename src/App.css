@@ -59,6 +59,13 @@
   }
   
   .title{
-    font-size:2rem;
+    font-size:1.5rem;
+    padding-block: 1rem;
     color: var(--black-color);
+  }
+  .bookCover{
+    width:12rem;
+    height: 15rem;
+    border-radius: .2rem;
+    object-fit: center;
   }

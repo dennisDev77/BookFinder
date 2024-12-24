@@ -28,14 +28,15 @@ const [books, setBooks]=React.useState([])
 
   return (
     <section>
-      <h2>Romance</h2>
-    <div className='flex justify-start'>
+    <h2 className='font-medium title pt-10'>Romance</h2>
+
+     <div className='flex justify-start items-start gap-4'>
 
           { books.map(book=>(
 
-            <Link key={book.id} className=''>
-              <p> Titulo: {book.volumeInfo.title}</p>
-              <img src={book.volumeInfo.imageLinks.thumbnail} alt="Carregando a capa"/>
+            <Link key={book.id} className=' shadow-sm w-56'>
+              <img src={book.volumeInfo.imageLinks.thumbnail} alt="Carregando a capa" className='bookCover'/>
+              {/* <p className='text-center whitespace-nowrap overflow-hidden'>{book.volumeInfo.title}</p> */}
             </Link>
           ))
           }     

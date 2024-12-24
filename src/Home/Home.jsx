@@ -1,5 +1,6 @@
 import React from 'react'
 import RomanceFiltro from './RomanceFiltro'
+import FiccaoCientifica from './FiccaoCientifica'
 // import {gsap} from 'gsap'
 
 const Home = () => {
@@ -24,8 +25,12 @@ const Home = () => {
 
       <div className='books'>
 
-        <div>
+        <div className='romance'>
           <RomanceFiltro/>
+        </div>
+
+        <div className='ficcaoCientifica'>
+          <FiccaoCientifica/>
         </div>
 
       </div>
