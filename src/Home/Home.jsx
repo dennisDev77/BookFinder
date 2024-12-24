@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Home.module.css'
-import PuffLoader from "react-spinners/PuffLoader";
 import api from '../Services/api'
+import Loading from '../Helper/Loading'
 // import {gsap} from 'gsap'
 
 const Home = () => {
@@ -17,21 +17,21 @@ const Home = () => {
   async function showtBooks(){
 
     try{
-
       const response= await api.get('/&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s')
       setBooks(response.data)
+      setLoading(false)
 
     }catch(err){
       console.log(`Existem um erro ${err}`)
     }
     }
       showtBooks()
-      
+
     },[])
 
     React.useEffect(()=>{
       console.log(books)
-    }, [books])
+    },[books])
   
     return (
 
@@ -48,16 +48,13 @@ const Home = () => {
       </div>
 
       <div className='books'>
-      {loading &&
+      {loading ?
+        <Loading/>
+        :
 
-      <div className={`${styles.loader} flex justify-center pt-16`}>
-        <PuffLoader
-          color='#5591C5'
-          loading={loading}
-          size={50}
-          />
-
-      </div>
+        <div>
+          <h2>Explore cada livros que temos para si</h2>
+        </div>
       }
       </div>
     </section>
