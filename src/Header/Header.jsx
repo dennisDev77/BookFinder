@@ -46,11 +46,12 @@ const Header = () => {
     <div className='flex justify-between items-center gap-16'>
    
 
-     {/* Mostrando menu Icon */}
+     {/* Show menu Icon */}
       <div>
         <button className={`${styles.btnMobile} text-3xl rounded-sm`} onClick={()=>setMenuState(!menuState)}> {menuState ? <IoClose/> : <LuMenu/> }</button>
       </div>
          
+         {/* Show Menus Category */}
        {menuState &&
         <div className={`${styles.menuWrapper} shadow-md flex flex-col justify-center fixed top-16 right-1 gap-3 p-6`}>
 
@@ -78,13 +79,6 @@ const Header = () => {
     </div>
 
     </div>
-
-    {/* {
-      search &&
-      <div key={book.volumeInfo.title}>
-        <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Carregando Foto" />
-      </div>
-    } */}
     </header>
   )
 }
