@@ -30,3 +30,8 @@
    background-color: #EEF2F3;
    z-index: 2024;
  }
+
+ .btnMobile{
+   box-shadow: 0 0 0 2px #403E3E;
+   color:#403E3E
+ }

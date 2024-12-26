@@ -39,24 +39,16 @@ const Header = () => {
 
     {/* Colocando a logo */}
       <Link>
-        <h1 className=' text-5xl text-color-blue flex items-center justify-center gap-2'> <span><FiBookOpen/></span> <span className='text-4xl text-color-black font-medium'>BookFinder</span></h1>
+        <h1 className='logo flex items-center justify-center gap-2  font-medium'> <span><FiBookOpen/></span> <span className='text-4xl text-color-black font-medium'>BookFinder</span></h1>
       </Link>
     {/* Fim */}
 
     <div className='flex justify-between items-center gap-16'>
-    {/*  Input search */}
-
-      <div className={`${styles.inputSearch} w-80 flex items-center relative`}>
-      <input type="search" placeholder='Procure por: titulo, autor ou genero' className=' w-full transition p-3   px-4 text-sm text-color-black rounded-full bg-color-white' ref={searchBook}/>
-
-      <button className=' absolute right-2 text-2xl p-2 text-color-black bg-color-white' onClick={handleClick}>
-        <LiaSearchSolid/>
-      </button>
-      </div>
+   
 
      {/* Mostrando menu Icon */}
       <div>
-        <button className='text-3xl' onClick={()=>setMenuState(!menuState)}> {menuState ? <IoClose/> : <LuMenu/> }</button>
+        <button className={`${styles.btnMobile} text-3xl rounded-sm`} onClick={()=>setMenuState(!menuState)}> {menuState ? <IoClose/> : <LuMenu/> }</button>
       </div>
          
        {menuState &&

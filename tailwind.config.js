@@ -12,10 +12,10 @@ export default {
         'color-gray':'#403E3E',
         'color-blue':'#5591C5',
       },
-      fontFamily:{
-        'title':'Poppins'
-      }
     },
+    fontFamily:{
+      sansLogo:['Asap Condensed', 'sans-serif']
+    }
   },
   plugins: [],
 }

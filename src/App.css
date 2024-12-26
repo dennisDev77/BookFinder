@@ -1,5 +1,7 @@
 /* Importando a font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset Css */
 *{
     margin:0;
     padding: 0;
@@ -10,7 +12,7 @@
     --black-color:#010000;
     --gray-color:#403E3E;
     --blue-color:#5591C5;
-      --font-type:'Poppins', sans-serif
+    --font-type:'Poppins', sans-serif
   }
 
   body{
@@ -57,9 +59,9 @@
   max-width: 68rem;
   margin: 0 auto;
   }
-  
+
   .title{
-    font-size:1.5rem;
+    font-size:1.3rem;
     padding-block: 1rem;
     color: var(--black-color);
   }
@@ -68,4 +70,9 @@
     height: 15rem;
     border-radius: .2rem;
     object-fit: center;
+  }
+  .logo{
+    font-family:'Asap Condensed';
+    color:var(--blue-color);
+    font-size: 2.2rem;
   }
