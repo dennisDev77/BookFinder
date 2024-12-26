@@ -8,7 +8,7 @@ projeto focado em um catalogo interativo de livros onde os usuarios vão poder p
 Fornecendo uma interface responsiva e simples de modo a facilitar todos amantes de livros explorarem  seus interesses pessoais.
 </p>
 
-
+<p>Se você quiser contribuir, clone este repositório, crie sua própria branch de trabalho e mãos à obra!</p>
 ```bash
 git clone https://github.com/dennisDev77/BookFinder.git
 ```
