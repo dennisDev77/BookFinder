@@ -2,35 +2,14 @@ import React from 'react'
 import { FiBookOpen } from "react-icons/fi";
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
-import { LiaSearchSolid } from "react-icons/lia";
 import { TbCategoryFilled } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import {menu} from '../Data/Data'
 import styles from './Header.module.css'
-import api from '../Services/api';
 
 const Header = () => {
   const [menuState, setMenuState]=React.useState(false)
-  const [search, setSearch]=React.useState([])
-
-  const searchBook=React.useRef()
-
- async  function handleClick(){
-    const inputSearch=searchBook.current.value
-
-    try{
-       const response= await api.get(`/${inputSearch}&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s`)
-       setSearch(response.data.items)
-       search.map(book=>(
-
-         console.log(book.volumeInfo.imageLinks.smallThumbnail)
-       ))
-
-    }catch(err){
-      console.log(err)
-    }
-  }
-
+  
   return (
 
     <header className='flex items-center shadow-sm'>

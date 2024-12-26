@@ -1,23 +1,3 @@
-/* Estles input Search */
-.inputSearch input{
-    transition: .2s;
-    border: 1px solid #403E3E;
- }
- 
- .inputSearch input:hover,
- .inputSearch input:focus{
-    box-shadow: 0 0 1px #403E3E;
- }
-
- .inputSearch input::placeholder{
-    color: #918c8c;
- }
-
- .inputSearch button{
-    border-top-right-radius:10rem ;
-    border-bottom-right-radius:10rem ;
- }
-
  /* Menu Aba */
  .abaMenu{
   box-shadow: 0 -1px #918c8c33, 0 1px #918c8c33;

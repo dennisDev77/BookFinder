@@ -1,0 +1,31 @@
+/* Estles input Search */
+.inputSearch input{
+    transition: .2s;
+    box-shadow: 0 0 0 1px #5591C5;
+ }
+ 
+ .inputSearch input:hover,
+ .inputSearch input:focus{
+    box-shadow: 0 0 0 2px #5591C5;
+ }
+
+ .inputSearch input::placeholder{
+    color: #726c6c;
+ }
+
+ .inputSearch button{
+    border-top-right-radius:10rem ;
+    border-bottom-right-radius:10rem ;
+    background:transparent;
+    background-color: var(--white-color);
+    border-left-color: #5591C5;
+    color: #5591C5;
+ }
+ .inputSearch button::before{
+    content: '';
+    display: block;
+    background-color: #645f5f;
+    width:.07rem;
+    height: 25px;
+    margin-right: .2rem;
+ }
