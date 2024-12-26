@@ -4,24 +4,6 @@ import styles from './Home.module.css'
 // import {gsap} from 'gsap'
 
 const Home = () => {
- const [search, setSearch]=React.useState([])
- 
-  // async  function getSearch(){
-  //   const inputSearch=searchBook.current.value
-
-  //   try{
-  //      const response= await api.get(`/${inputSearch}&key=AIzaSyD-HW_Gm0581UuWc81NTDNnkblhb9V_j6s`)
-  //      setSearch(response.data.items)
-  //      search.map(book=>(
-
-  //        console.log(book.volumeInfo.imageLinks.smallThumbnail)
-  //      ))
-
-  //   }catch(err){
-  //     console.log(err)
-  //   }
-  // }
-
 
     return (
 

@@ -24,7 +24,7 @@
  .inputSearch button::before{
     content: '';
     display: block;
-    background-color: #645f5f;
+    background-color: #5591C5;
     width:.07rem;
     height: 25px;
     margin-right: .2rem;
